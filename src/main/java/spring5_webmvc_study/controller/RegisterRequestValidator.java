@@ -43,6 +43,4 @@ public class RegisterRequestValidator implements Validator {
 			}
 		}
 	}
-	
-	
 }
