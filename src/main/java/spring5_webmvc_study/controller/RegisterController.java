@@ -21,11 +21,11 @@ public class RegisterController {
 		return "/register/step1";
 	}
 	@PostMapping("/register/step2")
-	public String handleStep2(@RequestParam(value = "agree", defaultValue = "false") Boolean agree, Model model) {
+	public String handleStep2(@RequestParam(value = "agree", defaultValue = "false") Boolean agree, RegisterRequest registerRequest) {
 		if(!agree) {
 			return "register/step1";
 		}
-		model.addAttribute("registerRequest", new RegisterRequest());
+//		model.addAttribute("registerRequest", new RegisterRequest()); Model 쓰면 이거 써야함.
 		return "register/step2";
 	}
 	@GetMapping("/register/step2")
@@ -35,7 +35,7 @@ public class RegisterController {
 	
 	
 	@PostMapping("/register/step3")
-	public String handleStep3(/* @ModelAttribute("formData") */ RegisterRequest reqReq) {
+	public String handleStep3(RegisterRequest reqReq) {
 		System.out.println(reqReq);			
 		try {
 			service.regist(reqReq);
