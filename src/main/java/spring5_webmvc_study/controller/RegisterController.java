@@ -2,7 +2,7 @@ package spring5_webmvc_study.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,10 +35,12 @@ public class RegisterController {
 	
 	
 	@PostMapping("/register/step3")
-	public String handleStep3(RegisterRequest reqReq) {
-		System.out.println(reqReq);			
+	public String handleStep3(RegisterRequest regReq, Errors errors) {
+		new RegisterRequestValidator().validate(regReq, errors);
+		if(errors.hasErrors())
+			return "register/step2";
 		try {
-			service.regist(reqReq);
+			service.regist(regReq);
 			return "register/step3";
 		}catch (DuplicateMemberException ex) {
 			return "register/step2";
