@@ -1,1 +1,1 @@
-{"resources":{"Scripts/Script.sql":{"sql-editor-data-source-id":"mysql5-17989209320-2472529dce4fe13b","default-datasource":"mysql5-17989209320-2472529dce4fe13b","default-catalog":"spring5"}}}
+{"resources":{"Scripts/1.grant.sql":{"sql-editor-data-source-id":"mysql5-17989209320-2472529dce4fe13b","default-datasource":"mysql5-17989209320-2472529dce4fe13b","default-catalog":"spring5"}}}

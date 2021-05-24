@@ -20,7 +20,11 @@ public class Member {
 			throw new WrongIdPasswordException();
 		}
 		this.password = newPassword;
-	}	
+	}
+	// 암호 일치 여부를 확인하기 위한 메서드이다.
+	public boolean matchPassword(String password) {
+		return this.password.equals(password);
+	}
 	
 	public Member( String email,   String password, String name, LocalDateTime registerDateTime) {
 		this.email = email;

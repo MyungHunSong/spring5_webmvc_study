@@ -25,10 +25,10 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
-	spring5_webmvc_study.config.MemberConfig
-	spring5_webmvc_study.config.MvcConfig
-	spring5_webmvc_study.config.ControllerConfig
-</param-value>
+			spring5_webmvc_study.config.MemberConfig
+			spring5_webmvc_study.config.MvcConfig
+			spring5_webmvc_study.config.ControllerConfig
+		</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

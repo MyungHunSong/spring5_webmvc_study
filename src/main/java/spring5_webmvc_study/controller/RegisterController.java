@@ -25,7 +25,7 @@ public class RegisterController {
 		if(!agree) {
 			return "register/step1";
 		}
-//		model.addAttribute("registerRequest", new RegisterRequest()); Model 쓰면 이거 써야함.
+		//		model.addAttribute("registerRequest", new RegisterRequest()); Model 쓰면 이거 써야함.
 		return "register/step2";
 	}
 	@GetMapping("/register/step2")

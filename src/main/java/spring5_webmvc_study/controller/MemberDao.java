@@ -22,7 +22,7 @@ public class MemberDao {
 	public void setJdbcTemplate(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-
+	// 
 	public Member selectByEmail(String email) {
 		List<Member> results = jdbcTemplate.query("select id, email, password, name, regdate from member where email = ?",
 				new MemberRowMapper(), email);
