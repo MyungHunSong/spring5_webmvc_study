@@ -24,8 +24,6 @@ public class LoginCommandValidator implements Validator{
 		
 		return LoginCommand.class.isAssignableFrom(clazz);
 	}
-
-
 	@Override
 	public void validate(Object target, Errors errors) {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "required");

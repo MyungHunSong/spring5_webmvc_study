@@ -4,9 +4,7 @@ public class AuthInfo {
 	private Long id;
 	private String email;
 	private String name;
-	
-	
-	
+
 	public AuthInfo() {}
 
 	public AuthInfo(Long id, String email, String name) {

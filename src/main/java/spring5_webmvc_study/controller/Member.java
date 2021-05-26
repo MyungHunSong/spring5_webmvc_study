@@ -10,9 +10,7 @@ public class Member {
 	private String password;
 	private String name;
 	private LocalDateTime registerDateTime;
-	
-	
-	
+
 	public Member() {}
 	
 	public void changePassword(String oldPassword,String newPassword) {
@@ -23,13 +21,14 @@ public class Member {
 	}
 	// 암호 일치 여부를 확인하기 위한 메서드이다.
 	public boolean matchPassword(String password) {
+		System.out.println(this.password);
 		return this.password.equals(password);
 	}
 	
-	public Member( String email,   String password, String name, LocalDateTime registerDateTime) {
+	public Member( String email, String name, String password, LocalDateTime registerDateTime) {
 		this.email = email;
-		this.password = password;
 		this.name = name;
+		this.password = password;
 		this.registerDateTime = registerDateTime;
 	}
 
@@ -84,8 +83,8 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return String.format("Member [id=%s, email=%s, password=%s, name=%s, registerDateTime=%s]", id, email, password,
-				name, registerDateTime);
+		return String.format("Member [id=%s, email=%s,  name=%s, password=%s, registerDateTime=%s]", id, email, 
+				name, password, registerDateTime);
 	}
 	
 	
