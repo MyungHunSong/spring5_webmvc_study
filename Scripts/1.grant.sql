@@ -12,3 +12,5 @@ select id,email,password,name,regdate
 	from member 
 where regdate between '2021-05-17' and '2021-05-25'
 order by regdate desc;
+
+select * from member where id = 43;

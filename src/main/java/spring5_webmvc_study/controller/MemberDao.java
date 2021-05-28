@@ -30,12 +30,18 @@ public class MemberDao {
 		@Override
 		public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Member member = new Member(rs.getString("email"), 
-					rs.getString("name"), rs.getString("password"),  rs.getTimestamp("regdate").toLocalDateTime());
+					 rs.getString("name"),rs.getString("password"),  rs.getTimestamp("regdate").toLocalDateTime());
 			member.setId(rs.getLong("id"));
 			return member;
 		}
 	};
 	
+	//detailSelect
+	public Member selectById(Long memId) {
+		String sql = "select * from member where id = ?";
+		List<Member> results = jdbcTemplate.query(sql, memberRowMapper, memId);
+		return results.isEmpty() ? null : results.get(0);
+	}
 	
 	// selectByEmail
 	public Member selectByEmail(String email) {

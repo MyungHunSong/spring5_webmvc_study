@@ -47,7 +47,10 @@ dependencies {
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.49'
 	
 	//hikari
-	implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.5'	
+	implementation group: 'com.zaxxer', name: 'HikariCP', version: '3.4.5'
+	
+		// Json
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.3'	
 	
 	implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
 	 
